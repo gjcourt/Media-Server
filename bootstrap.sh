@@ -20,7 +20,7 @@ GUEST_GROUP="visitor"
 """
 For the groups above, define users
 """
-CONTROL_GROUP_LIST="gjcourt, albertni, oyakojon, randall"
-GUEST_GROUP_LIST=""
+CONTROL_GROUP_LIST="gjcourt"
+GUEST_GROUP_LIST="test0, test1"
 
-# chmod 750 >>> -rwxr-x---
+# chmod 750 >>> -rwxr-x--r
