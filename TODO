@@ -1,0 +1,78 @@
+# 0x00 Initial setup
+# Wipe system and fresh install
+# Start a new file logging everything that you're doing
+    * load all script files on github
+    * port that log over to bootstrap.sh
+# Create baller group and a few accounts to allow initial access
+    * Create users (gjcourt, albertni, oyakojon, ranall)
+    * Create ballers group
+    * Add above users to baller group
+    * Add above users to the sudoers file
+    * (?) Add above users to baller group
+# Find a way to play media from multiple sources
+    # Look into mplayer
+    # Look into VLC
+    # Look into latest Ubuntu's media system
+    # Keep in mind interface for remote
+    # Write a control script to play things media
+        # Write a command to open media
+            * Set aspect ratio
+            * Set volume
+            * Set subtitles off
+            * Create config file for the above options
+        # Write a command to play media
+        # Write a command to pause media
+        # Set chmod +rwx baller, +rx visitor
+# Get ssh setup on the server
+    # Tune ssh_config file
+        * Make sure that users need ssh-keys to auth
+        * (?) Possibly block anything that's not localhost
+    # (?) Write a script to ssh forward a port on a remote server
+        // This enables running commands from my VPS on the house server
+        * Make sure that it acts as a passthrough so that users can be preserved
+        * Daemonize the script so that it can run at startup
+        * (?) Add on a cron to check to see if it's running
+        // Look up a way to build an ssh tunnel
+        // ssh -LN
+# Limit ssh to certain user accounts or groups
+    # Find a way to limit ssh to specific user accounts/groups
+    # Find a way to use ssh keys to auth users (requires users to generate keys)
+
+# 0x01 Add torrent functionality
+# Write script to add new guests accounts easily
+    * Give ballers group +wx on the script
+    * Create a limited user account on the visitor groups
+    * Add user to the visitor group
+    * Write user promotion scripts
+    * Write user deletion scripts
+# Install deluge and get a script running to start/stop deluge
+    # Write a deluge control script (deluge.py as delugectl)
+        * Write a command to start deluge
+        * Write a command to stop deluge
+        * Write a command to pause deluge
+        * Write a command to add a torrent file into deluge
+        * Write a command to add a file of torrent files into deluge
+        * Set chmod +xw baller
+        * Add a -f flag to read a file and add torrent contents
+    # Write torrent.py script
+        # Write a command to find
+        # Write a command to add
+            * default to queue
+            * add flag for instant
+        * Genercize so that adding a new host is like defining a new file
+        * Make sure that torrent search is smart
+    # Write torrent FS
+        * specify a place to finally store torrents once they are downloaded
+    # Write torrent queue
+        * Torrent queue runs a torrent either now or on the queue
+        * Solve the now case first
+        * Solve the queue case
+
+# 0x02 Add remote functionality
+# Research
+# Make it happen
+
+# 0x03 Nice to haves
+# Kerberos auth
+# Get the system to hook up into the wifi
+# Get all scripts/contols into github for other people to use
